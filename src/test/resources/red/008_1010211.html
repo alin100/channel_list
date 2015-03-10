@@ -1,0 +1,647 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title><link href="css/reset.css" rel="stylesheet" type="text/css" media="all" /><link href="css/global_so.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if lt IE 7]>
+  <link href="../css/ie6.css" rel="stylesheet" type="text/css" media="all" />
+<![endif]-->
+<!–[if lt IE 7]> 
+<script defer type="text/javascript" src="inc/pngfix.js"></script>
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+//click
+function swap(nonum){
+   document.form1.aaaaa.value = nonum;
+   if(nonum == 1){
+     document.demo.location.href='tv1.html';
+	 
+	 MM_swapImage('tab11','','img/tag_promot_on.gif',1);
+	 MM_swapImage('tab12','','img/tag_bestprograme_off.gif',1);
+	
+   }
+   if(nonum == 2){
+     document.demo.location.href='tv2.html';
+	 //document.target.location.href='target2.html';
+	 MM_swapImage('tab11','','img/tag_promot_off.gif',1);
+	 MM_swapImage('tab12','','img/tag_bestprograme_on.gif',1);
+	
+   } 
+   
+}
+
+function swap4(nonum, url){
+   document.getElementById("msgMore").href = url;  //
+   document.form2.aaaaa.value = nonum;
+   if(nonum == 1){
+     //document.target.location.href='target1.html';
+	 MM_swapImage('tab21','','img/tag_improtant_on.gif',1);
+	 MM_swapImage('tab22','','img/tag_sys_off.gif',1);
+
+	
+	 document.getElementById("tb1").style.display = "";  
+	 document.getElementById("tb2").style.display = "none";
+
+   }
+   if(nonum == 2){
+     //document.demo.location.href='demo2.html';
+	 //document.target.location.href='target2.html';
+	 MM_swapImage('tab21','','img/tag_improtant_off.gif',1);
+	 MM_swapImage('tab22','','img/tag_sys_on.gif',1);
+	
+	 
+	 document.getElementById("tb1").style.display = "none";  
+	 document.getElementById("tb2").style.display = "";
+
+   }  
+   
+}
+
+function swap7(nonum){
+   document.form3.aaaaa.value = nonum;
+   if(nonum == 1){
+     //document.target.location.href='target1.html';
+	 MM_swapImage('tab31','','img/tag_cable_on.gif',1);
+	 MM_swapImage('tab32','','img/tag_digital_off.gif',1);
+	 MM_swapImage('tab33','','img/tag_mylife_off.gif',1);
+	 MM_swapImage('tab34','','img/tag_adsl_off.gif',1);
+	
+	 document.getElementById("tc1").style.display = "";  
+	 document.getElementById("tc2").style.display = "none";
+	 document.getElementById("tc3").style.display = "none";  
+	 document.getElementById("tc4").style.display = "none";
+   }
+   if(nonum == 2){
+     //document.demo.location.href='demo2.html';
+	 //document.target.location.href='target2.html';
+	 MM_swapImage('tab31','','img/tag_cable_off.gif',1);
+	 MM_swapImage('tab32','','img/tag_digital_on.gif',1);
+	 MM_swapImage('tab33','','img/tag_mylife_off.gif',1);
+	 MM_swapImage('tab34','','img/tag_adsl_off.gif',1);
+	 
+	 document.getElementById("tc1").style.display = "none";  
+	 document.getElementById("tc2").style.display = "";
+	 document.getElementById("tc3").style.display = "none";  
+	 document.getElementById("tc4").style.display = "none";
+   }
+   if(nonum == 3){  
+     //document.demo.location.href='demo3.html';
+	 //document.target.location.href='target3.html';
+	 MM_swapImage('tab31','','img/tag_cable_off.gif',1);
+	 MM_swapImage('tab32','','img/tag_digital_off.gif',1);
+	 MM_swapImage('tab33','','img/tag_mylife_on.gif',1);
+	 MM_swapImage('tab34','','img/tag_adsl_off.gif',1);
+	 
+	 document.getElementById("tc1").style.display = "none";  
+	 document.getElementById("tc2").style.display = "none";
+	 document.getElementById("tc3").style.display = "";  
+	 document.getElementById("tc4").style.display = "none";
+   }
+   
+   if(nonum == 4){  
+     ///document.demo.location.href='demo3.html';
+	 //document.target.location.href='target4.html';
+	 MM_swapImage('tab31','','img/tag_cable_off.gif',1);
+	 MM_swapImage('tab32','','img/tag_digital_off.gif',1);
+	 MM_swapImage('tab33','','img/tag_mylife_off.gif',1);
+	 MM_swapImage('tab34','','img/tag_adsl_on.gif',1);
+	 
+	 document.getElementById("tc1").style.display = "none";  
+	 document.getElementById("tc2").style.display = "none";
+	 document.getElementById("tc3").style.display = "none";  
+	 document.getElementById("tc4").style.display = "";
+   } 
+   
+}
+//mouseover
+function swap2(nonum){
+  // document.form1.aaaaa.value = nonum;
+  	
+   if(nonum == 1){   if(nonum ==  document.form1.aaaaa.value){   }else{  MM_swapImage('tab11','','img/tag_promot_on.gif',1); } }
+   if(nonum == 2){   if(nonum ==  document.form1.aaaaa.value){   }else{  MM_swapImage('tab12','','img/tag_bestprograme_on.gif',1); } }
+ 
+  
+}
+
+function swap5(nonum){
+  // document.form1.aaaaa.value = nonum;
+  
+	
+   if(nonum == 1){   if(nonum ==  document.form2.aaaaa.value){   }else{  MM_swapImage('tab21','','img/tag_improtant_on.gif',1); } }
+   if(nonum == 2){   if(nonum ==  document.form2.aaaaa.value){   }else{  MM_swapImage('tab22','','img/tag_sys_on.gif',1); } }
+ 
+  
+}
+function swap8(nonum){
+  // document.form1.aaaaa.value = nonum;
+   if(nonum == 1){   if(nonum ==  document.form3.aaaaa.value){   }else{  MM_swapImage('tab31','','img/tag_cable_on.gif',1); } }
+   if(nonum == 2){   if(nonum ==  document.form3.aaaaa.value){   }else{  MM_swapImage('tab32','','img/tag_digital_on.gif',1); } }
+   if(nonum == 3){   if(nonum ==  document.form3.aaaaa.value){   }else{  MM_swapImage('tab33','','img/tag_mylife_on.gif',1); } }
+   if(nonum == 4){   if(nonum ==  document.form3.aaaaa.value){   }else{  MM_swapImage('tab34','','img/tag_adsl_on.gif',1); } }
+  
+}
+
+//mouseout
+function swap3(nonum){
+  // document.form1.aaaaa.value = nonum;
+  
+   if(nonum == 1){
+     if(nonum ==  document.form1.aaaaa.value){
+     	 MM_swapImage('tab11','','img/tag_promot_on.gif',1);
+	 }else{
+	     MM_swapImage('tab11','','img/tag_promot_off.gif',1);
+	 }
+   }
+   if(nonum == 2){
+    if(nonum ==  document.form1.aaaaa.value){
+     	 MM_swapImage('tab12','','img/tag_bestprograme_on.gif',1);
+	 }else{
+	     MM_swapImage('tab12','','img/tag_bestprograme_off.gif',1);
+	 }
+   }
+ 
+   
+   
+   
+}
+
+function swap6(nonum){
+  // document.form1.aaaaa.value = nonum;
+ 
+   if(nonum == 1){
+     if(nonum ==  document.form2.aaaaa.value){
+     	 MM_swapImage('tab21','','img/tag_improtant_on.gif',1);
+	 }else{
+	     MM_swapImage('tab21','','img/tag_improtant_off.gif',1);
+	 }
+   }
+   if(nonum == 2){
+    if(nonum ==  document.form2.aaaaa.value){
+     	 MM_swapImage('tab22','','img/tag_sys_on.gif',1);
+	 }else{
+	     MM_swapImage('tab22','','img/tag_sys_off.gif',1);
+	 }
+   }   
+   
+   
+}
+
+function swap9(nonum){
+  // document.form1.aaaaa.value = nonum;
+   if(nonum == 1){
+     if(nonum ==  document.form3.aaaaa.value){
+     	 MM_swapImage('tab31','','img/tag_cable_on.gif',1);
+	 }else{
+	     MM_swapImage('tab31','','img/tag_cable_off.gif',1);
+	 }
+   }
+   if(nonum == 2){
+    if(nonum ==  document.form3.aaaaa.value){
+     	 MM_swapImage('tab32','','img/tag_digital_on.gif',1);
+	 }else{
+	     MM_swapImage('tab32','','img/tag_digital_off.gif',1);
+	 }
+   }
+   if(nonum == 3){  
+    if(nonum ==  document.form3.aaaaa.value){
+     	 MM_swapImage('tab33','','img/tag_mylife_on.gif',1);
+	 }else{
+	     MM_swapImage('tab33','','img/tag_mylife_off.gif',1);
+	 }
+	 
+   }
+    if(nonum == 4){  
+    if(nonum ==  document.form3.aaaaa.value){
+     	 MM_swapImage('tab34','','img/tag_adsl_on.gif',1);
+	 }else{
+	     MM_swapImage('tab34','','img/tag_adsl_off.gif',1);
+	 }
+	 
+   }
+   
+   
+   
+}
+
+
+function pload(){
+    MM_swapImage('tab11','','img/tag_promot_on.gif',1);
+    document.form1.aaaaa.value = 1;
+	
+	 MM_swapImage('tab21','','img/tag_improtant_on.gif',1);
+    document.form2.aaaaa.value = 1;
+	
+	 MM_swapImage('tab31','','img/tag_improtant_on.gif',1);
+    document.form3.aaaaa.value = 1;
+}
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+<![endif]–>
+<link href="css/so.css" rel="stylesheet" type="text/css" /></head>
+<body  class="twoColumnText" id="SO" onLoad="MM_preloadImages('img/chlisttab1_o.gif','img/chlisttab2_o.gif','img/chlisttab3_o.gif')">
+    <form name="form1" method="post" action="channelsearch.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWYAKhyZXhAQKm6r7cBgKDgZOzDQL4mPWpAwLVr9ecCQKaj4apDgKCrp+GBQKBrp+GBQKQrp+GBQKfrp+GBQKHrt+FBQKHrtOFBQKHrteFBQKHruuFBQKHruOFBQKHrueFBQKHrvuFBQKHrr+GBQKHrrOGBQKGrt+FBQKGrtOFBQKGrteFBQKGruuFBQKGru+FBQKGruOFBQKGrueFBQKGrvuFBQKGrr+GBQKGrrOGBQKFrt+FBQKFrtOFBQKFrteFBQKFruuFBQKFru+FBQKFrueFBQKFrvuFBQKFrr+GBQKFrrOGBQKErt+FBQKErtOFBQKErteFBQKEruuFBQKEru+FBQKEruOFBQKErueFBQKErrOGBQKDrt+FBQKDrtOFBQKDrteFBQKDruuFBQKDru+FBQKDruOFBQKDrueFBQKDrvuFBQKDrr+GBQKDrrOGBQKCrtOFBQKCrteFBQKCruuFBQKCru+FBQKCruOFBQKCrueFBQKCrvuFBQKCrr+GBQKCrrOGBQKBrt+FBQKBrtOFBQKBrteFBQKBruuFBQKBru+FBQKBruOFBQKBrueFBQKBrvuFBQKBrr+GBQKBrrOGBQKQrtOFBQKQrteFBQKQru+FBQKQruOFBQKQrueFBQKQrvuFBQKQrr+GBQKfrt+FBQKfrtOFBQKfruuFBQKfru+FBQKfruOFBQKfrueFBQLM1p6nDALXwfyMBgLyqNMRAp2SsecNArj9l8wHAp2SsecNAu7P66YLAvaS1YoLRxTj8dBxGW1b/IyFfxXJ7dRzlZY=" />
+</div>
+    <div class="middle">
+    <div id="mainContent">
+       <div class="contact-searchPane">
+        <table>
+        <tr>
+        <td>播出日期&nbsp;</td>
+        <td>
+            <select name="ddlDate" id="ddlDate" class="width120">
+	<option value="1010210">101年02月10日</option>
+	<option selected="selected" value="1010211">101年02月11日</option>
+	<option value="1010212">101年02月12日</option>
+	<option value="1010213">101年02月13日</option>
+	<option value="1010214">101年02月14日</option>
+
+</select>       
+        </td>
+        <td>　頻道&nbsp;</td>
+        <td>
+            <select name="ddlChn" id="ddlChn">
+	<option value="6">(6CH)民視</option>
+	<option value="7">(7CH)人間</option>
+	<option selected="selected" value="8">(8CH)台視</option>
+	<option value="9">(9CH)大愛</option>
+	<option value="10">(10CH)中視</option>
+	<option value="11">(11CH)霹靂台灣台</option>
+	<option value="12">(12CH)華視</option>
+	<option value="13">(13CH)公視</option>
+	<option value="15">(15CH)好消息</option>
+	<option value="16">(16CH)原住民頻道</option>
+	<option value="17">(17CH)客語頻道</option>
+	<option value="18">(18CH)國家地理頻道</option>
+	<option value="19">(19CH)Discovery</option>
+	<option value="20">(20CH)旅遊生活頻道</option>
+	<option value="21">(21CH)動物星球</option>
+	<option value="22">(22CH)Cartoon Network</option>
+	<option value="23">(23CH)迪士尼</option>
+	<option value="24">(24CH)MOMO親子台</option>
+	<option value="25">(25CH)東森幼幼台</option>
+	<option value="26">(26CH)緯來綜合台</option>
+	<option value="27">(27CH)GTV第1台</option>
+	<option value="28">(28CH)GTV綜合台</option>
+	<option value="29">(29CH)三立台灣台</option>
+	<option value="30">(30CH)三立都會台</option>
+	<option value="31">(31CH)衛視中文台</option>
+	<option value="32">(32CH)東森綜合台</option>
+	<option value="33">(33CH)超視</option>
+	<option value="34">(34CH)momo購物台2 </option>
+	<option value="36">(36CH)中天綜合台</option>
+	<option value="37">(37CH)東風</option>
+	<option value="38">(38CH)MUCH TV</option>
+	<option value="39">(39CH)中天娛樂台</option>
+	<option value="40">(40CH)東森戲劇台</option>
+	<option value="41">(41CH)GTV 戲劇台</option>
+	<option value="42">(42CH)TVBS-G</option>
+	<option value="43">(43CH)緯來戲劇台</option>
+	<option value="44">(44CH)高點電視台 </option>
+	<option value="45">(45CH)衛視合家歡</option>
+	<option value="46">(46CH)JET</option>
+	<option value="49">(49CH)momo購物台1</option>
+	<option value="50">(50CH)年代新聞台</option>
+	<option value="51">(51CH)東森新聞台</option>
+	<option value="52">(52CH)中天新聞台</option>
+	<option value="53">(53CH)民視新聞台</option>
+	<option value="54">(54CH)三立新聞台</option>
+	<option value="55">(55CH)TVBS-N</option>
+	<option value="56">(56CH)TVBS</option>
+	<option value="57">(57CH)東森新聞S台</option>
+	<option value="58">(58CH)非凡新聞台</option>
+	<option value="59">(59CH)VIVA購物台</option>
+	<option value="61">(61CH)衛視電影台</option>
+	<option value="62">(62CH)東森電影台</option>
+	<option value="63">(63CH)緯來電影台</option>
+	<option value="64">(64CH)LS TIMES電影台</option>
+	<option value="65">(65CH)HBO</option>
+	<option value="66">(66CH)東森洋片台</option>
+	<option value="67">(67CH)AXN</option>
+	<option value="68">(68CH)Hollywood</option>
+	<option value="69">(69CH)衛視西片台</option>
+	<option value="70">(70CH)緯來育樂台</option>
+	<option value="71">(71CH)CINEMAX</option>
+	<option value="72">(72CH)緯來體育台</option>
+	<option value="73">(73CH)ESPN</option>
+	<option value="74">(74CH)衛視體育台</option>
+	<option value="75">(75CH)緯來日本台</option>
+	<option value="76">(76CH)ANIMAX</option>
+	<option value="77">(77CH)國興衛視 </option>
+	<option value="78">(78CH)【V】娛樂台</option>
+	<option value="79">(79CH)momo購物台3</option>
+	<option value="81">(81CH)台灣綜合台</option>
+	<option value="82">(82CH)世界衛視 </option>
+	<option value="84">(84CH)台藝頻道</option>
+	<option value="85">(85CH)蓬萊綜合台</option>
+	<option value="86">(86CH)娛樂K台</option>
+	<option value="87">(87CH)中華財經</option>
+	<option value="88">(88CH)財訊財經</option>
+	<option value="90">(90CH)非凡財經</option>
+	<option value="91">(91CH)全球 (SBN) 財經</option>
+	<option value="93">(93CH)華人財經</option>
+	<option value="94">(94CH)國衛</option>
+	<option value="95">(95CH)Z頻道</option>
+	<option value="96">(96CH)華視教育頻道</option>
+	<option value="101">(101CH)MTV </option>
+	<option value="102">(102CH)華藏</option>
+	<option value="103">(103CH)法界</option>
+	<option value="104">(104CH)慈悲</option>
+	<option value="105">(105CH)生命</option>
+	<option value="104">(104CH)慈悲</option>
+	<option value="107">(107CH)NHK</option>
+
+</select>       
+        </td>
+        <td>&nbsp;&nbsp;
+        <input type="submit" name="btnQry" value="查詢" id="btnQry" class="submit" />      
+        </td></tr>
+        </table>
+        </div>
+        <div class="contact-main-top2"></div>
+        <div class="summary">
+                  <table class="default">
+                    <tr>
+                      <th align="middle" class="width100"  height="27">時 間</th>
+                      <th align="middle"  height="27">節 目 名 稱</th>
+                    </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          00:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  樂活在人間:75	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 01:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 元氣美食簡單做第一季:167
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          01:30		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  元氣美食簡單做第一季:168	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 02:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 知道:54
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          03:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  人間心燈:752	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 04:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 2011當代生活講座
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          05:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  人間新聞	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 06:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 梵音清流
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          06:30		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  感恩故事集第2季:12	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 07:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 明日工作室
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          08:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  2011當代生活講座	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 09:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 戲說人間
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          11:30		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  小沙彌歡喜看人間:19	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 12:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 人間新聞
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          13:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  台灣系列:36	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 14:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 僧事百講
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          15:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  知道:54	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 16:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 梵音清流
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          16:30		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  戲說人間	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 18:30	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 台灣系列:92
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          18:45		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  台灣系列:93	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 19:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 僧事百講
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          20:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  屈原:18	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 21:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 知道:55
+		              </td>
+		              </tr>
+                  
+                      <tr class="addMargin">		               
+		              <td align="center" class="pagebreadtxt">
+                          22:00		                      	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                  人間新聞	
+		              </td>
+		              </tr>	 
+                  
+                      <tr class="even">		               
+		              <td align="center" class="pagebreadtxt">
+		                 23:00	
+		              </td>
+		              <td class="ch_TXT_blue">
+		                 知道:55
+		              </td>
+		              </tr>
+                       
+              
+		 	            
+                  </table>
+              <div class="noticeofAction"> *以上節目時刻表僅供參考，如有異動，請依電視台實際播放節目為準。</div>
+                <div class="backtoTop"><a href="#wrap" class="numbertext">TOP</a></div>
+            </div>
+    </div>
+    </div>
+    </form>
+</body>
+</html>

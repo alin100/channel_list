@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- /* * Copyright (c) 2000 - 2010 Groundhog Technologies Inc. * 11F, 297, Sec 2. Heping E. Road, Taipei, Taiwan, R.O.C. 
+	* All rights reserved. * * This software is the confidential and proprietary information of * Groundhog Technologies Inc 
+	("Confidential Information"). You shall * not disclose such Confidential Information and shall use it only in * accordance 
+	with the terms of the license agreement you entered into * with Groundhog Technologies Inc. */ -->
+<!-- <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5"> -->
+
+<web-app id="CovMoIntegration" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>Data Processing</display-name>
+
+	<!-- spring framework -->
+  <!-- Note: The servlets/filters referenced here are documented in the SDK javadoc -->
+    <context-param>
+        <param-name>HSQLDB_CONFIG</param-name>
+        <param-value>/WEB-INF/classes/hsqlserver.properties</param-value>
+    </context-param>
+
+    <!--start hsql db on startup for ease of use. Actualy database is located under WEB-INF/db/hsqldb-->
+    <listener>
+        <listener-class>app.web.tw.util.HSQLServletContextListener</listener-class>
+    </listener>
+    		
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+    	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/classes/META-INF/spring/application-context.xml
+		</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>spring</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/spring/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<session-config>
+		<session-timeout>180</session-timeout> <!-- in minutes -->
+	</session-config>
+	
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

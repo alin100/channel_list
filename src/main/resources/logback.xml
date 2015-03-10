@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+		<encoder>
+      		<pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>c:/logs/channel_list.log</file>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+	      	<fileNamePattern>c:/logs/channel_list.%d{yyyy-MM-dd}.log</fileNamePattern>
+	      	<maxHistory>30</maxHistory>
+    	</rollingPolicy>
+    	<encoder>
+      		<pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
+    	</encoder>
+	</appender>
+
+	<logger name="app.web.tw" level="DEBUG" />	
+	<logger name="org.hibernate" level="INFO" />
+	<!-- 
+	<logger name="org.springframework.integration" level="INFO" />
+	<logger name="com.atomikos" level="INFO" />
+	<logger name="org.apache.commons" level="DEBUG" />
+ 	-->
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
